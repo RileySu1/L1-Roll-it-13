@@ -1,15 +1,24 @@
+# functions go here
 
-while True:
-    want_instructions = input("Do you want to see the instructions? ").lower()# check the user says yes / no
+def yes_no(question):
 
-    if want_instructions == "yes" or want_instructions == "y":
-        print("you said yes")
-        break
-    elif want_instructions == "no" or want_instructions == "n":
-        print("you said no")
-        break
-    else:
-        print("please enter yes / no")
-        continue
+     """Checks user response to a question is yes/ no (y/n). returns 'yes' or 'no' """
 
-print("we done")
+     while True:
+
+        response = input(question).lower()
+
+        #check the user says yes / no / y / n
+        if response == "yes" or response == "y":
+            return "yes"
+        elif response == "no" or response == "n":
+            return "no"
+        else:
+            print("please enter yes / no")
+
+
+# Main routine
+
+want_instructions = "Do you want to see the instructions? "
+want_coffee = yes_no("Do you want coffee? ")
+ 
