@@ -19,6 +19,9 @@ def yes_no(question):
 
 # Main routine
 
-want_instructions = "Do you want to see the instructions? "
-want_coffee = yes_no("Do you want coffee? ")
- 
+# testing loop...
+while True:
+    want_instructions = yes_no("Do you want to see the instructions? ")
+    print(f"you choose {want_instructions}")
+
+print("we done")
