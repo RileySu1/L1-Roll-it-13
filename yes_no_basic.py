@@ -27,6 +27,22 @@ Roll the dice and try to win!
 
 
 
+def int_checker():
+    """Checks users enter an integer more than / equal to 13"""
+
+    error ="Please enter am integer more than / equal to 13."
+
+    while True:
+        try:
+            response = int(input("What is your goal? "))
+
+            if response < 13:
+                print(error)
+            else:
+                return response
+
+        except ValueError:
+            print(error)
 
 # Main routine
 
@@ -38,4 +54,5 @@ if want_instructions == "yes":
     instructions()
 
 print()
-print("Progress continues")
+game_goal = int_checker()
+print(game_goal)
